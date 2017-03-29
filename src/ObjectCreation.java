@@ -5,17 +5,17 @@ import java.io.ObjectOutputStream;
 
 public class ObjectCreation {
       public static void main(String args[]){
-    	  Car car1 = new Car();     // Using new 
+    	  Car car1 = new Car();     // Method 1 : Using new 
     	  System.out.println(car1);
     	  
     	  try{
-    		 Car car2 = (Car) car1.clone();     // Using clone to create 
+    		 Car car2 = (Car) car1.clone();     //  Method 2 :Using clone to create 
     		 System.out.println(car2);
     	  }catch(CloneNotSupportedException e){
     		  
     	  }
     	  try{
-    	  Car car3 =(Car) Class.forName("Car").newInstance();   //Using reflection
+    	  Car car3 =(Car) Class.forName("Car").newInstance();   // Method 3 :Using reflection
     	  System.out.println(car3);
     	  }
     	  catch(Exception e){
@@ -28,7 +28,7 @@ public class ObjectCreation {
     	  try{
     	     fileOS = new FileOutputStream("car.ser");                 
     		objectOS = new ObjectOutputStream(fileOS);
-    		objectOS.writeObject(car4);                         //serializing object to the file
+    		objectOS.writeObject(car4);                         // Method 4 : Serializing object to the file
     		objectOS.close();
     	  }
     	  catch(Exception e){
