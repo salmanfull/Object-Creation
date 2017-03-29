@@ -26,9 +26,9 @@ public class ObjectCreation {
     	  FileOutputStream fileOS = null;
     	  ObjectOutputStream objectOS = null;
     	  try{
-    	     fileOS = new FileOutputStream("car.ser");
+    	     fileOS = new FileOutputStream("car.ser");                 
     		objectOS = new ObjectOutputStream(fileOS);
-    		objectOS.writeObject(car4);
+    		objectOS.writeObject(car4);                         //serializing object to the file
     		objectOS.close();
     	  }
     	  catch(Exception e){
